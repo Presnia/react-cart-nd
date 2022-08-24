@@ -4,7 +4,6 @@ import { Items } from './data/Items';
 
 const ItemBlock = ({
     mainCount,
-    setMainCount,
     count1,
     setCount1,
     count2,
@@ -26,6 +25,7 @@ const ItemBlock = ({
                         key={item.id}
                         title={item.title}
                         count={item.count}
+                        disabled={item.disabled}
                         mainCount={mainCount}
                         count1={count1}
                         setCount1={setCount1}

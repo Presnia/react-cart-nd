@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import ButtonGroup from "../Buttons/ButtonGroup";
 
 const Counter = () => {

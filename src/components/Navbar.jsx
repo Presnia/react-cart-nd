@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navbar = ({ getMainCount }) => {
+const Navbar = ({ mainCount }) => {
     return (
         <nav className='navbar px-5 rounded-4' style={{backgroundColor: '#efefef'}}>
             <h3>Navbar</h3>
@@ -23,7 +23,7 @@ const Navbar = ({ getMainCount }) => {
                         justifyContent: 'center'
                     }}
                 >
-                        <span className='fw-semibold'>{getMainCount()}</span>
+                        <span className='fw-semibold'>{mainCount}</span>
                     </span>
             </div>
         </nav>

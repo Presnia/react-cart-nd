@@ -14,7 +14,8 @@ const Item = ({
     count4,
     setCount4,
     count5,
-    setCount5
+    setCount5,
+    disabled
     }) => {
 
     const formatCount = () => {
@@ -33,7 +34,6 @@ const Item = ({
         if (id === 4) {
             return count5 <= 0 ? 'empty' : count5;
         }
-
     }
 
     const getBadgeClassesCount = () => {
@@ -67,6 +67,12 @@ const Item = ({
                 <div>
                     <ButtonGroup
                         id={id}
+                        disabled={disabled}
+                        count1={count1}
+                        count2={count2}
+                        count3={count3}
+                        count4={count4}
+                        count5={count5}
                         setCount1={setCount1}
                         setCount2={setCount2}
                         setCount3={setCount3}
