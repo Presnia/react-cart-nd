@@ -9,13 +9,7 @@ const ItemBlock = () => {
         <ul className='ps-0'>
             {
                 row.map(item =>
-                    <Item
-                        id={item.id}
-                        key={item.id}
-                        title={item.title}
-                        count={item.count}
-                        disabled={item.disabled}
-                    />
+                    <Item key={item.id} {...item} />
                 )
             }
         </ul>
