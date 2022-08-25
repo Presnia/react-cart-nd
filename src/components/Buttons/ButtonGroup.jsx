@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from "../../App";
 
-const ButtonGroup = ({
-    id,
-    setCount1,
-    setCount2,
-    setCount3,
-    setCount4,
-    setCount5,
-    count1,
-    count2,
-    count3,
-    count4,
-    count5,
-    disabled
-    }) => {
+const ButtonGroup = ({ id, disabled}) => {
+    const {
+        setCount1,
+        setCount2,
+        setCount3,
+        setCount4,
+        setCount5,
+        count1,
+        count2,
+        count3,
+        count4,
+        count5
+    } = useContext(AppContext);
 
     const handleIncrement = () => {
         if (id === 0) {

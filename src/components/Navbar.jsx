@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from "../App";
 
-const Navbar = ({ mainCount }) => {
+const Navbar = () => {
+    const { mainCount } = useContext(AppContext);
     return (
         <nav className='navbar px-5 rounded-4' style={{backgroundColor: '#efefef'}}>
             <h3>Navbar</h3>

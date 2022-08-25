@@ -1,22 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ButtonGroup from "./Buttons/ButtonGroup";
 import ButtonCart from "./Buttons/ButtonCart";
+import { AppContext } from "../App";
 
-const Item = ({
-    id,
-    title,
-    count1,
-    setCount1,
-    count2,
-    setCount2,
-    count3,
-    setCount3,
-    count4,
-    setCount4,
-    count5,
-    setCount5,
-    disabled
-    }) => {
+const Item = ({ id, title, disabled }) => {
+    const{
+        count1,
+        count2,
+        count3,
+        count4,
+        count5,
+    } = useContext(AppContext);
 
     const formatCount = () => {
         if (id === 0) {
@@ -65,21 +59,8 @@ const Item = ({
                     <span className={getBadgeClassesCount()}>{formatCount()}</span>
                 </div>
                 <div>
-                    <ButtonGroup
-                        id={id}
-                        disabled={disabled}
-                        count1={count1}
-                        count2={count2}
-                        count3={count3}
-                        count4={count4}
-                        count5={count5}
-                        setCount1={setCount1}
-                        setCount2={setCount2}
-                        setCount3={setCount3}
-                        setCount4={setCount4}
-                        setCount5={setCount5}
-                    />
-                    <ButtonCart />
+                    <ButtonGroup id={id} disabled={disabled} />
+                    <ButtonCart id={id} />
                 </div>
             </div>
         </li>

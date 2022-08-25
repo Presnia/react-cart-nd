@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from "../../App";
 
-const ButtonCart = () => {
+const ButtonCart = ({ id }) => {
+    const { row, setRow } = useContext(AppContext);
+
+    const handleCartButton = () => {
+        setRow(row.filter(item => item.id !== id));
+    }
+
     return (
-        <button className='btn btn-secondary'>
+        <button className='btn btn-secondary' onClick={handleCartButton}>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-cart4"
                  viewBox="0 0 16 16">
                 <path
